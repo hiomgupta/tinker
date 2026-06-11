@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>om.g Spherical Gallery</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="sphere"></canvas>
+
+    <main class="experience" aria-label="Spherical image gallery">
+      <header class="brandbar">
+        <a class="brand" href="https://omfolio.framer.website" target="_blank" rel="noreferrer">om.g</a>
+        <a class="site-link" href="https://omfolio.framer.website" target="_blank" rel="noreferrer">omfolio.framer.website</a>
+      </header>
+
+      <section id="gallery" class="gallery" aria-live="polite"></section>
+    </main>
+
+    <div id="detail" class="detail" aria-hidden="true" role="dialog" aria-label="Image preview">
+      <button id="closeDetail" class="detail-close" type="button" aria-label="Close image preview">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="detail-media">
+        <img id="zoomImage" alt="" />
+      </div>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "gsap": "https://esm.sh/gsap@3.12.5",
+          "three": "https://esm.sh/three@0.160.0"
+        }
+      }
+    </script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
